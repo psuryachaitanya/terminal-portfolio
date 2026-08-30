@@ -12,39 +12,63 @@ import type {
   ResumeInfo,
 } from './types'
 
-function glob(pattern: string): Record<string, string> {
-  return import.meta.glob(pattern, {
-    eager: true,
-    query: '?raw',
-    import: 'default',
-  }) as Record<string, string>
-}
-
+const experienceFiles = import.meta.glob('/src/content/experience/*.md', {
+  eager: true,
+  query: '?raw',
+  import: 'default',
+}) as Record<string, string>
 export const experience: ExperienceItem[] = parseCollection<ExperienceItem>(
-  glob('/src/content/experience/*.md')
+  experienceFiles
 ).sort((a, b) => b.startDate.localeCompare(a.startDate))
 
-export const projects: ProjectItem[] = parseCollection<ProjectItem>(
-  glob('/src/content/projects/*.md')
+const projectFiles = import.meta.glob('/src/content/projects/*.md', {
+  eager: true,
+  query: '?raw',
+  import: 'default',
+}) as Record<string, string>
+export const projects: ProjectItem[] = parseCollection<ProjectItem>(projectFiles)
+
+const publicationFiles = import.meta.glob('/src/content/publications/*.md', {
+  eager: true,
+  query: '?raw',
+  import: 'default',
+}) as Record<string, string>
+export const publications: PublicationItem[] = parseCollection<PublicationItem>(
+  publicationFiles
+).sort((a, b) => (b.date ?? '').localeCompare(a.date ?? ''))
+
+const talkFiles = import.meta.glob('/src/content/talks/*.md', {
+  eager: true,
+  query: '?raw',
+  import: 'default',
+}) as Record<string, string>
+export const talks: TalkItem[] = parseCollection<TalkItem>(talkFiles).sort(
+  (a, b) => (b.date ?? '').localeCompare(a.date ?? '')
 )
 
-export const publications: PublicationItem[] = parseCollection<PublicationItem>(
-  glob('/src/content/publications/*.md')
-).sort((a, b) => (b.date ?? '').localeCompare(a.date ?? ''))
+const teachingFiles = import.meta.glob('/src/content/teaching/*.md', {
+  eager: true,
+  query: '?raw',
+  import: 'default',
+}) as Record<string, string>
+export const teaching: TeachingItem[] = parseCollection<TeachingItem>(teachingFiles).sort(
+  (a, b) => (b.date ?? '').localeCompare(a.date ?? '')
+)
 
-export const talks: TalkItem[] = parseCollection<TalkItem>(
-  glob('/src/content/talks/*.md')
-).sort((a, b) => (b.date ?? '').localeCompare(a.date ?? ''))
+const blogFiles = import.meta.glob('/src/content/blog/*.md', {
+  eager: true,
+  query: '?raw',
+  import: 'default',
+}) as Record<string, string>
+export const blog: BlogPost[] = parseCollection<BlogPost>(blogFiles).sort(
+  (a, b) => (b.date ?? '').localeCompare(a.date ?? '')
+)
 
-export const teaching: TeachingItem[] = parseCollection<TeachingItem>(
-  glob('/src/content/teaching/*.md')
-).sort((a, b) => (b.date ?? '').localeCompare(a.date ?? ''))
-
-export const blog: BlogPost[] = parseCollection<BlogPost>(
-  glob('/src/content/blog/*.md')
-).sort((a, b) => (b.date ?? '').localeCompare(a.date ?? ''))
-
-const profileFiles = glob('/src/content/profile.md')
+const profileFiles = import.meta.glob('/src/content/profile.md', {
+  eager: true,
+  query: '?raw',
+  import: 'default',
+}) as Record<string, string>
 const profileRaw = Object.values(profileFiles)[0] ?? ''
 const profileParsed = matter(profileRaw)
 export const profile: Profile = {
@@ -52,7 +76,11 @@ export const profile: Profile = {
   bio: profileParsed.content.trim(),
 }
 
-const resumeFiles = glob('/src/content/resume.md')
+const resumeFiles = import.meta.glob('/src/content/resume.md', {
+  eager: true,
+  query: '?raw',
+  import: 'default',
+}) as Record<string, string>
 const resumeRaw = Object.values(resumeFiles)[0] ?? ''
 const resumeParsed = matter(resumeRaw)
 export const resume: ResumeInfo = {
