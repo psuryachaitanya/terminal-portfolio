@@ -1,0 +1,174 @@
+.profile-panel {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
+    Arial, sans-serif;
+  background: var(--bg-secondary);
+  color: var(--text);
+  border-radius: 12px;
+  padding: 2rem;
+  overflow-y: auto;
+  max-height: 100vh;
+  box-sizing: border-box;
+}
+
+.profile-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.profile-header__avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0 auto 1rem;
+}
+
+.profile-header__name {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.profile-header__title {
+  font-size: 0.95rem;
+  opacity: 0.7;
+  margin: 0.25rem 0 0.75rem;
+}
+
+.profile-header__bio {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin: 0 0 1rem;
+}
+
+.profile-header__links {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.profile-header__link {
+  font-size: 0.85rem;
+  color: var(--accent);
+  text-decoration: none;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 0.3rem 0.8rem;
+}
+
+.profile-header__link:hover {
+  text-decoration: underline;
+}
+
+.profile-section {
+  margin-bottom: 1.75rem;
+}
+
+.profile-section__title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0 0 0.75rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.4rem;
+}
+
+.experience-timeline {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.experience-timeline__item {
+  border-left: 2px solid var(--border);
+  padding-left: 0.9rem;
+}
+
+.experience-timeline__dates {
+  font-size: 0.75rem;
+  opacity: 0.6;
+}
+
+.experience-timeline__role {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.experience-timeline__company {
+  font-size: 0.85rem;
+  opacity: 0.75;
+  margin-bottom: 0.35rem;
+}
+
+.experience-timeline__summary {
+  font-size: 0.85rem;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.project-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 0.9rem;
+}
+
+.project-card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 10px;
+  padding: 0.9rem;
+}
+
+.project-card__title {
+  font-size: 0.9rem;
+  margin: 0 0 0.4rem;
+}
+
+.project-card__summary {
+  font-size: 0.8rem;
+  line-height: 1.4;
+  opacity: 0.8;
+  margin: 0 0 0.5rem;
+}
+
+.project-card__link {
+  font-size: 0.8rem;
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.highlight-list {
+  list-style: none;
+  margin: 0 0 0.75rem;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.highlight-list__item {
+  font-size: 0.85rem;
+  display: flex;
+  gap: 0.5rem;
+  align-items: baseline;
+}
+
+.highlight-list__label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  background: var(--accent);
+  color: #fff;
+  border-radius: 4px;
+  padding: 0.1rem 0.4rem;
+  flex-shrink: 0;
+}

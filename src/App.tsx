@@ -1,7 +1,14 @@
-// src/App.tsx
 import { TerminalShell } from './components/TerminalShell'
+import { ProfilePanel } from './components/ProfilePanel'
 import './styles/terminal.css'
+import './styles/profile.css'
+import './styles/layout.css'
 
 export default function App() {
-  return <TerminalShell />
+  return (
+    <div className="app-layout">
+      <ProfilePanel />
+      <TerminalShell />
+    </div>
+  )
 }

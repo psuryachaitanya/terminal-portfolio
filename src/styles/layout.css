@@ -1,0 +1,16 @@
+.app-layout {
+  display: grid;
+  grid-template-columns: minmax(320px, 1fr) minmax(360px, 1.2fr);
+  gap: 1.5rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+@media (max-width: 860px) {
+  .app-layout {
+    grid-template-columns: 1fr;
+  }
+}
