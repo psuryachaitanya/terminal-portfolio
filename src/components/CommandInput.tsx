@@ -1,6 +1,4 @@
-// src/components/CommandInput.tsx
 import { useState, type FormEvent } from 'react'
-import { SuggestionChips } from './SuggestionChips'
 
 export function CommandInput({ onSubmit }: { onSubmit: (value: string) => void }) {
   const [value, setValue] = useState('')
@@ -12,24 +10,19 @@ export function CommandInput({ onSubmit }: { onSubmit: (value: string) => void }
     setValue('')
   }
 
-  function handleChipSelect(command: string) {
-    onSubmit(command)
-  }
-
   return (
-    <div className="command-input-area">
-      <SuggestionChips onSelect={handleChipSelect} />
-      <form className="command-input" onSubmit={handleSubmit}>
-        <span className="command-input__prompt">&gt;</span>
-        <input
-          type="text"
-          value={value}
-          onChange={(e) => setValue(e.target.value)}
-          placeholder="Type a command, or ask a question..."
-          autoFocus
-          aria-label="Command input"
-        />
-      </form>
-    </div>
+    <form className="command-input" onSubmit={handleSubmit}>
+      <input
+        type="text"
+        value={value}
+        onChange={(e) => setValue(e.target.value)}
+        placeholder="Ask a question..."
+        autoFocus
+        aria-label="Message input"
+      />
+      <button type="submit" className="command-input__send" aria-label="Send">
+        ↑
+      </button>
+    </form>
   )
 }

@@ -2,13 +2,8 @@ import { useState } from 'react'
 import { computeResponse } from '../lib/commands/dispatch'
 import { makeBubble, type Bubble } from '../lib/bubble'
 
-const WELCOME_TEXT =
-  'Welcome. Type "help" to see available commands, or click a suggestion below.'
-
 export function useTerminal() {
-  const [bubbles, setBubbles] = useState<Bubble[]>([
-    makeBubble('terminal', WELCOME_TEXT),
-  ])
+  const [bubbles, setBubbles] = useState<Bubble[]>([])
 
   function submit(raw: string) {
     const trimmed = raw.trim()
@@ -26,5 +21,9 @@ export function useTerminal() {
     setBubbles((prev) => [...prev, userBubble, responseBubble])
   }
 
-  return { bubbles, submit }
+  function reset() {
+    setBubbles([])
+  }
+
+  return { bubbles, submit, reset }
 }
