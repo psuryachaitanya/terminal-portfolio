@@ -21,7 +21,10 @@ export function ChatPanel() {
 
       {isEmpty ? (
         <div className="chat-panel__empty">
-          <h2 className="chat-panel__greeting">Ask me anything about Surya</h2>
+          <h2 className="chat-panel__greeting">Ask me anything</h2>
+          <p className="chat-panel__subgreeting">
+            I can answer questions about Surya's experience, projects, publications, and more.
+          </p>
           <SuggestedPrompts onSelect={submit} />
         </div>
       ) : (

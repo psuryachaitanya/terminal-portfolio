@@ -1,3 +1,5 @@
+import { Plus } from 'lucide-react'
+
 export function NewChatButton({
   onClick,
   disabled,
@@ -14,7 +16,8 @@ export function NewChatButton({
       aria-label="Start a new chat"
       title="New chat"
     >
-      + New chat
+      <Plus size={14} />
+      New chat
     </button>
   )
 }

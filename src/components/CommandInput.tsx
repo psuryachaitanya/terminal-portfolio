@@ -1,4 +1,5 @@
 import { useState, type FormEvent } from 'react'
+import { ArrowUp } from 'lucide-react'
 
 export function CommandInput({ onSubmit }: { onSubmit: (value: string) => void }) {
   const [value, setValue] = useState('')
@@ -20,8 +21,13 @@ export function CommandInput({ onSubmit }: { onSubmit: (value: string) => void }
         autoFocus
         aria-label="Message input"
       />
-      <button type="submit" className="command-input__send" aria-label="Send">
-        ↑
+      <button
+        type="submit"
+        className="command-input__send"
+        aria-label="Send"
+        disabled={!value.trim()}
+      >
+        <ArrowUp size={16} />
       </button>
     </form>
   )

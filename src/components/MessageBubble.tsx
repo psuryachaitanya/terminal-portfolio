@@ -1,3 +1,4 @@
+import { Bot } from 'lucide-react'
 import type { Bubble } from '../lib/bubble'
 import { useStreamingText } from '../hooks/useStreamingText'
 
@@ -26,11 +27,15 @@ export function MessageBubble({
       className="message message--assistant"
       onClick={isStreaming ? complete : undefined}
     >
-      <div className="message__label">Assistant</div>
-      <p className="message__text">
-        {visibleText}
-        {isStreaming && <span className="message__cursor" aria-hidden="true" />}
-      </p>
+      <div className="message__avatar">
+        <Bot size={16} />
+      </div>
+      <div className="message__content">
+        <p className="message__text">
+          {visibleText}
+          {isStreaming && <span className="message__cursor" aria-hidden="true" />}
+        </p>
+      </div>
     </div>
   )
 }
