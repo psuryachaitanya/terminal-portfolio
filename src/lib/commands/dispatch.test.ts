@@ -26,7 +26,7 @@ describe('computeResponse', () => {
   })
 
   it('passes arguments through to the renderer', () => {
-    const result = computeResponse('publications example-paper')
-    expect(result.text).toContain('[Paper Title]')
+    const result = computeResponse('publications 2021-performance-cost-comparison')
+    expect(result.text).toContain('Performance and Cost Comparison')
   })
 })

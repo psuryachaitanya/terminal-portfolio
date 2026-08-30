@@ -1,10 +1,10 @@
 ---
-name: "[YOUR NAME]"
-title: "[YOUR TITLE — e.g. Lead AI Engineer]"
-email: "[your@email.com]"
-github: "[https://github.com/yourhandle]"
-linkedin: "[https://linkedin.com/in/yourhandle]"
-location: "[City, Country]"
+name: "Venkata Surya Chaitanya Palepu"
+title: "Lead AI Software Engineer"
+email: "psuryachaitanya@gmail.com"
+github: "https://github.com/psuryachaitanya"
+linkedin: "https://www.linkedin.com/in/surya-chaitanya-palepu"
+location: "San Jose, CA"
 ---
 
-[REPLACE ME: Write 2-3 sentences about who you are, what you do, and what you're passionate about. This is your `whoami` response.]
+I'm a Lead AI Software Engineer at Auditoria.AI, where I build agentic AI systems that act as on-demand financial analysts for enterprise accounts-payable teams — grounded, auditable answers over a company's own financial data, not just chat. Before that, I designed cloud-scale ML infrastructure at TCS Research & Innovation Labs (6 papers, 2 patents in serverless computing) and built full-stack systems at Oracle Cerner, and I hold an MS in Computer Science from Georgia Tech. I'm most interested in agentic tooling, LLM infrastructure, and the unglamorous plumbing that makes AI systems actually trustworthy in production.

@@ -42,9 +42,11 @@ export const renderers: Record<string, Renderer> = {
   },
 
   talks: () =>
-    talks
-      .map((t) => `${t.title} — ${t.venue}, ${t.location} (${t.date})`)
-      .join('\n\n'),
+    talks.length > 0
+      ? talks
+          .map((t) => `${t.title} — ${t.venue}, ${t.location} (${t.date})`)
+          .join('\n\n')
+      : "No talks yet — I'll list them here once I've given one.",
 
   teaching: () =>
     teaching.map((t) => `${t.title} — ${t.venue} (${t.date})`).join('\n\n'),
@@ -55,6 +57,9 @@ export const renderers: Record<string, Renderer> = {
       return post
         ? `${post.title} (${post.date})\n\n${post.body}`
         : `No post found for "${args[0]}". Try "blog" to list all.`
+    }
+    if (blog.length === 0) {
+      return "No posts yet — check back soon."
     }
     return blog.map((p) => `${p.title} (${p.date}) [slug: ${p.slug}]`).join('\n')
   },
