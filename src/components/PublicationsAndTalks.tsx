@@ -11,9 +11,10 @@ export function PublicationsAndTalks() {
           {publications.map((item) => (
             <li key={item.slug} className="highlight-list__item">
               <span className="highlight-list__label">Paper</span>
-              <span>
-                {item.title} — {item.venue}
-              </span>
+              <div className="highlight-list__body">
+                <div className="highlight-list__title">{item.title}</div>
+                <div className="highlight-list__venue">{item.venue}</div>
+              </div>
             </li>
           ))}
         </ul>
@@ -23,9 +24,10 @@ export function PublicationsAndTalks() {
           {talks.map((item) => (
             <li key={item.slug} className="highlight-list__item">
               <span className="highlight-list__label">Talk</span>
-              <span>
-                {item.title} — {item.venue}
-              </span>
+              <div className="highlight-list__body">
+                <div className="highlight-list__title">{item.title}</div>
+                <div className="highlight-list__venue">{item.venue}</div>
+              </div>
             </li>
           ))}
         </ul>

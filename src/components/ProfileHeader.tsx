@@ -1,3 +1,4 @@
+import { Mail, Github, Linkedin } from 'lucide-react'
 import { profile } from '../lib/content'
 
 function getInitials(name: string): string {
@@ -16,11 +17,17 @@ export function ProfileHeader() {
     <div className="profile-header">
       <div className="profile-header__avatar">{initials}</div>
       <h1 className="profile-header__name">{profile.name}</h1>
-      <p className="profile-header__title">{profile.title}</p>
+      <span className="profile-header__badge">{profile.title}</span>
+      <p className="profile-header__tagline">{profile.tagline}</p>
       <p className="profile-header__bio">{profile.bio}</p>
       <div className="profile-header__links">
         {profile.email && (
-          <a href={`mailto:${profile.email}`} className="profile-header__link">
+          <a
+            href={`mailto:${profile.email}`}
+            className="profile-header__link"
+            aria-label="Email"
+          >
+            <Mail size={16} />
             Email
           </a>
         )}
@@ -30,7 +37,9 @@ export function ProfileHeader() {
             target="_blank"
             rel="noreferrer"
             className="profile-header__link"
+            aria-label="GitHub"
           >
+            <Github size={16} />
             GitHub
           </a>
         )}
@@ -40,7 +49,9 @@ export function ProfileHeader() {
             target="_blank"
             rel="noreferrer"
             className="profile-header__link"
+            aria-label="LinkedIn"
           >
+            <Linkedin size={16} />
             LinkedIn
           </a>
         )}

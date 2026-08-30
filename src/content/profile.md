@@ -1,6 +1,7 @@
 ---
 name: "Venkata Surya Chaitanya Palepu"
 title: "Lead AI Software Engineer"
+tagline: "Building agentic AI systems for enterprise finance at Auditoria.AI"
 email: "psuryachaitanya@gmail.com"
 github: "https://github.com/psuryachaitanya"
 linkedin: "https://www.linkedin.com/in/surya-chaitanya-palepu"

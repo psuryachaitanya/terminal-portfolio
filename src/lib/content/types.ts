@@ -12,6 +12,7 @@ export interface ExperienceItem extends ContentMeta {
   startDate: string
   endDate: string
   summary: string
+  tags: string[]
 }
 
 export interface ProjectItem extends ContentMeta {
@@ -45,6 +46,7 @@ export interface BlogPost extends ContentMeta {
 export interface Profile {
   name: string
   title: string
+  tagline: string
   email: string
   github?: string
   linkedin?: string

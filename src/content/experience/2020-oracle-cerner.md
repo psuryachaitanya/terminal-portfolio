@@ -6,6 +6,9 @@ location: "Remote"
 startDate: "2020-01"
 endDate: "2020-11"
 summary: "Built a client-onboarding web app and automated large-scale health-data pipelines."
+tags: ["ReactJS", "AWS", "Spark", "Hadoop"]
 ---
 
-Showcased a proof-of-concept full-stack web application (ReactJS, AWS) that streamlined client-service onboarding, saving 25 man-hours per week. Automated Elastic Map Reduce (EMR) data-processing pipelines with AWS Step Functions, cutting manual execution steps by 70%. Optimized Spark queries to efficiently filter millions of health records, boosting processing throughput by 1.3x. Worked in an agile environment using Jira, Crucible, and Jenkins for CI/CD.
+- Built a full-stack onboarding app (ReactJS, AWS) saving 25 engineering hours per week.
+- Automated EMR data pipelines with AWS Step Functions, cutting manual steps by 70%.
+- Optimized Spark queries filtering millions of health records, improving throughput 1.3x.

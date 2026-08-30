@@ -1,39 +1,81 @@
 :root {
-  --bg: #1a1a1a;
-  --bg-secondary: #2a2a2a;
-  --text: #e8e8e8;
-  --text-secondary: #a0a0a0;
-  --border: #3a3a3a;
-  --accent: #4d8fd6;
+  --bg: #fafaf9;
+  --surface: #ffffff;
+  --border: rgba(24, 24, 27, 0.08);
+  --text: #18181b;
+  --text-secondary: #71717a;
+  --accent: #4f46e5;
+  --accent-2: #7c3aed;
+  --accent-soft: rgba(79, 70, 229, 0.08);
   --accent-text: #ffffff;
-  --card-bg: #262626;
-  --card-border: #3a3a3a;
-  --bubble-user-bg: #2b3a4a;
-  --bubble-user-text: #e8e8e8;
-  --input-bg: #262626;
-  --input-border: #3a3a3a;
+
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Helvetica, Arial, sans-serif;
+
+  --text-display: 2.75rem;
+  --text-h2: 1.5rem;
+  --text-h3: 1.125rem;
+  --text-body: 1rem;
+  --text-small: 0.8125rem;
+
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-full: 999px;
+
+  --shadow-sm: 0 1px 2px rgba(24, 24, 27, 0.04);
+  --shadow-md: 0 4px 20px rgba(79, 70, 229, 0.1);
+
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-base: 200ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Aliases kept for the chat panel (Stage 2 will migrate these away) */
+  --bg-secondary: var(--surface);
+  --card-bg: var(--surface);
+  --card-border: var(--border);
+  --bubble-user-bg: var(--accent-soft);
+  --bubble-user-text: var(--text);
+  --input-bg: var(--surface);
+  --input-border: var(--border);
 }
 
-:root[data-theme='light'] {
-  --bg: #ffffff;
-  --bg-secondary: #f7f7f8;
-  --text: #1a1a1a;
-  --text-secondary: #6e6e80;
-  --border: #e0e0e0;
-  --accent: #2b6cb0;
-  --accent-text: #ffffff;
-  --card-bg: #ffffff;
-  --card-border: #e0e0e0;
-  --bubble-user-bg: #e9f0f9;
-  --bubble-user-text: #1a1a1a;
-  --input-bg: #ffffff;
-  --input-border: #e0e0e0;
+:root[data-theme='dark'] {
+  --bg: #18181b;
+  --surface: #212124;
+  --border: rgba(255, 255, 255, 0.08);
+  --text: #f4f4f5;
+  --text-secondary: #a1a1aa;
+  --accent: #818cf8;
+  --accent-2: #a78bfa;
+  --accent-soft: rgba(129, 140, 248, 0.14);
+  --accent-text: #18181b;
+  --shadow-md: 0 4px 24px rgba(0, 0, 0, 0.4);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 body {
   margin: 0;
   background: var(--bg);
   color: var(--text);
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-    Helvetica, Arial, sans-serif;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
 }

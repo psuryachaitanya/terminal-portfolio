@@ -6,6 +6,9 @@ location: "Atlanta, GA"
 startDate: "2023-05"
 endDate: "2023-08"
 summary: "Built a full-stack ticketing system for Georgia Tech administrative staff and faculty."
+tags: ["React", "Spring Boot", "Azure DevOps", "Docker"]
 ---
 
-Conceptualized, designed, and developed a dynamic full-stack web application (React, Spring Boot, Azure Web Apps, Azure DevOps), resulting in a 30% reduction in request processing time and improved collaboration efficiency between administrative staff and faculty through a comprehensive ticketing system. Implemented OpenID Connect for single sign-on. Spearheaded an end-to-end DevOps pipeline with Azure DevOps Pipelines, Azure Web App for containers, Git, and Docker for seamless integration, automated testing, and continuous deployment.
+- Built a full-stack ticketing system (React, Spring Boot) cutting request processing time by 30%.
+- Implemented OpenID Connect for single sign-on across the application.
+- Led an end-to-end DevOps pipeline with Azure DevOps, Docker, and Git for automated testing and deployment.
