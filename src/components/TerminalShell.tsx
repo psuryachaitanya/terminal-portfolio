@@ -2,6 +2,7 @@
 import { useTerminal } from '../hooks/useTerminal'
 import { MessageList } from './MessageList'
 import { CommandInput } from './CommandInput'
+import { ThemeToggle } from './ThemeToggle'
 
 export function TerminalShell() {
   const { bubbles, submit } = useTerminal()
@@ -13,6 +14,7 @@ export function TerminalShell() {
         <span className="dot dot--yellow" />
         <span className="dot dot--green" />
         <span className="terminal-shell__title">guest@portfolio: ~</span>
+        <ThemeToggle />
       </div>
       <MessageList bubbles={bubbles} />
       <CommandInput onSubmit={submit} />
